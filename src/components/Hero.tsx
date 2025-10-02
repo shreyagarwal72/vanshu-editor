@@ -1,14 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import heroBg from "@/assets/hero-bg-enhanced.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const [secretClicks, setSecretClicks] = useState(0);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const handleSecretClick = () => {
+    const newCount = secretClicks + 1;
+    setSecretClicks(newCount);
+    
+    if (newCount === 5) {
+      navigate('/unlock-course-secret');
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+        navigate('/unlock-course-secret');
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [navigate]);
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -25,7 +50,11 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-black font-montserrat text-foreground leading-tight">
+          <h1 
+            className="text-5xl md:text-7xl font-black font-montserrat text-foreground leading-tight cursor-pointer select-none"
+            onClick={handleSecretClick}
+            title="🤫"
+          >
             VANSHU AGARWAL
           </h1>
           <p className="text-2xl md:text-3xl gradient-text font-semibold">
