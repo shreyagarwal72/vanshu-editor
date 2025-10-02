@@ -52,22 +52,10 @@ const Navbar = () => {
               About
             </button>
             <button
-              onClick={() => scrollToSection("portfolio")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              Portfolio
-            </button>
-            <button
               onClick={() => scrollToSection("skills")}
               className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
             >
               Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("youtube")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              YouTube
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
@@ -103,22 +91,10 @@ const Navbar = () => {
                 About
               </button>
               <button
-                onClick={() => scrollToSection("portfolio")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                Portfolio
-              </button>
-              <button
                 onClick={() => scrollToSection("skills")}
                 className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
               >
                 Skills
-              </button>
-              <button
-                onClick={() => scrollToSection("youtube")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                YouTube
               </button>
               <Button
                 onClick={() => scrollToSection("contact")}

@@ -29,13 +29,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@vanshu.dev",
-      href: "mailto:contact@vanshu.dev",
+      value: "sanjayvansu1973@gmail.com",
+      href: "mailto:sanjayvansu1973@gmail.com",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Available Worldwide",
+      value: "Agra, Balkeshwar",
       href: null,
     },
   ];

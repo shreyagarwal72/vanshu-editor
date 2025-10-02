@@ -77,6 +77,19 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    background-image: url('/src/assets/site-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(220 26% 6% / 0.95), hsl(220 26% 6% / 0.92));
+    z-index: -1;
   }
   
   h1, h2, h3, h4, h5, h6 {
