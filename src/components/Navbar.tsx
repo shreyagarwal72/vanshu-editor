@@ -63,12 +63,6 @@ const Navbar = () => {
             >
               Skills
             </button>
-            <button
-              onClick={() => scrollToSection("testimonials")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              Testimonials
-            </button>
             <Button
               onClick={() => scrollToSection("contact")}
               className="bg-primary hover:bg-primary/90 glow-effect"
@@ -113,12 +107,6 @@ const Navbar = () => {
                 className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
               >
                 Skills
-              </button>
-              <button
-                onClick={() => scrollToSection("testimonials")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                Testimonials
               </button>
               <Button
                 onClick={() => scrollToSection("contact")}
