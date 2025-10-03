@@ -28,7 +28,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold font-montserrat mb-4">Quick Links</h3>
             <div className="space-y-2">
-              {["Home", "About", "Portfolio", "Skills", "YouTube", "Contact"].map((link) => (
+              {["Home", "About", "Services", "Skills", "Contact"].map((link) => (
                 <button
                   key={link}
                   onClick={() => {
@@ -57,11 +57,11 @@ const Footer = () => {
                 <span>9412104618</span>
               </a>
               <a
-                href="mailto:contact@vanshu.dev"
+                href="mailto:sanjayvansu1973@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary smooth-transition"
               >
                 <Mail size={18} />
-                <span>contact@vanshu.dev</span>
+                <span>sanjayvansu1973@gmail.com</span>
               </a>
               <a
                 href="#youtube"
