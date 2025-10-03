@@ -116,4 +116,53 @@ All colors MUST be HSL.
   .smooth-transition {
     transition: var(--transition-smooth);
   }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 8rem;
+    }
+  }
+  
+  .animate-fade-out {
+    animation: fade-out 3s ease-out forwards;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fade-in-scale 1s ease-out 0.5s backwards;
+  }
+  
+  .animate-expand {
+    animation: expand 1s ease-out 1.5s backwards;
+  }
 }
