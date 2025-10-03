@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Play } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg-enhanced.jpg";
@@ -68,19 +68,18 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button
               size="lg"
-              onClick={() => scrollToSection("portfolio")}
-              className="bg-primary hover:bg-primary/90 glow-effect text-lg px-8 py-6 group"
+              onClick={() => scrollToSection("contact")}
+              className="bg-primary hover:bg-primary/90 glow-effect text-lg px-8 py-6"
             >
-              <Play className="mr-2 group-hover:scale-110 transition-transform" size={20} />
-              View Portfolio
+              Get in Touch
             </Button>
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("services")}
               className="border-2 border-foreground/20 hover:border-primary hover:bg-primary/10 text-lg px-8 py-6"
             >
-              Get in Touch
+              My Services
             </Button>
           </div>
 
