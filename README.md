@@ -1,73 +1,140 @@
-# Welcome to your Lovable project
+# 🎬 Vanshu Agarwal — Professional Video Editor & Creative Mind
 
-## Project info
+Welcome to the official portfolio of **Vanshu Agarwal**, a passionate and creative **video editor** dedicated to transforming raw footage into cinematic masterpieces.  
+This site showcases Vanshu’s editing skills, creative direction, and YouTube content — all in one elegant, modern web experience.
 
-**URL**: https://lovable.dev/projects/988eb6b5-ab4c-43e7-9492-91fa7316d7ef
+---
 
-## How can I edit this code?
+## 🌟 Overview
 
-There are several ways of editing your application.
+**Website Name:** Vanshu Agarwal — Professional Video Editor & Creative Mind  
+**Purpose:** Portfolio and contact hub for video editing projects and collaborations.  
+**Built With:** Modern frontend stack for smooth performance and SEO optimization.  
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/988eb6b5-ab4c-43e7-9492-91fa7316d7ef) and start prompting.
+## 🚀 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🎥 **Professional Portfolio** — Highlighting creative editing work and YouTube videos.  
+- 💻 **Modern & Responsive Design** — Optimized for desktop, tablet, and mobile viewing.  
+- ⚡ **Fast Loading** — Lightweight and performance-focused.  
+- 🔍 **SEO Optimized** — Includes complete meta tags for Google, Open Graph, and Twitter Cards.  
+- 🧠 **Personal Branding** — Focused on creativity, storytelling, and professional identity.  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework:** React + TypeScript  
+- **Styling:** CSS / TailwindCSS  
+- **Fonts:** Montserrat & Inter (Google Fonts)  
+- **Build Tool:** Vite  
+- **Deployment:** Vercel / Netlify / GitHub Pages  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧩 Meta Configuration
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The HTML includes full SEO and social tags for better visibility and sharing:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```html
+<meta name="google-site-verification" content="KYowygvsrbCJwszF1adTZ1WltiKdP6Mvx_YMChVKKBQ" />
+<meta name="description" content="Professional video editor and creative specialist. Explore my portfolio of stunning video projects, editing skills, and YouTube content." />
+<meta property="og:title" content="Vanshu Agarwal - Professional Video Editor & Creative Mind" />
+<meta property="og:description" content="Professional video editor and creative specialist. Explore my portfolio and YouTube content." />
+<meta property="og:image" content="/favicon.png" />
+<meta name="twitter:card" content="summary_large_image" />
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+
+---
+
+📁 Project Structure
+
+Vanshu-Agarwal-Portfolio/
+├── public/
+│   ├── favicon.png
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── main.tsx
+│   └── App.tsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+
+---
+
+⚙️ Local Setup
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/vanshu-agarwal-portfolio.git
+cd vanshu-agarwal-portfolio
+
+
+2. Install Dependencies
+
+npm install
+
+
+3. Run Development Server
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4. Build for Production
 
-**Use GitHub Codespaces**
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+📡 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/988eb6b5-ab4c-43e7-9492-91fa7316d7ef) and click on Share -> Publish.
+You can easily deploy this portfolio using:
 
-## Can I connect a custom domain to my Lovable project?
+Vercel (Recommended)
 
-Yes, you can!
+Netlify
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+GitHub Pages
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Cloudflare Pages
+
+
+Simply connect your GitHub repository and deploy the build folder.
+
+
+---
+
+🧠 Future Enhancements
+
+🎞️ Add video previews of past editing projects
+
+🧩 Integrate contact form with email notifications
+
+💬 Add testimonials from clients
+
+🔗 Connect YouTube and Instagram feeds dynamically
+
+
+
+---
+
+👨‍🎨 Author
+
+Developed by: Vanshu Agarwal
+🎥 Professional Video Editor & Content Creator
+💡 Passionate about storytelling, cinematics, and creative editing.
+
+
+---
+
+🪪 License
+
+This project is open source and available under the MIT License.
