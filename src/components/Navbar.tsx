@@ -22,97 +22,74 @@ const Navbar = () => {
     }
   };
 
+  const navItems = ["Home", "About", "Services", "Skills", "Contact"];
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl rounded-2xl smooth-transition ${
+        isScrolled ? "glass-strong" : "glass-subtle"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="px-6 py-3">
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold font-montserrat gradient-text hover:opacity-80 smooth-transition"
+            className="text-xl font-bold font-montserrat gradient-text hover:opacity-80 smooth-transition"
           >
             VA
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-foreground/80 hover:text-foreground smooth-transition font-medium"
-            >
-              Skills
-            </button>
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-[hsl(0_0%_100%/0.08)] smooth-transition font-medium text-sm"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-primary hover:bg-primary/90 glow-effect"
+              className="rounded-xl bg-primary hover:bg-primary/90 text-sm px-5"
             >
-              Contact
+              Let's Talk
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden p-2 rounded-xl hover:bg-[hsl(0_0%_100%/0.08)] smooth-transition text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("hero")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection("skills")}
-                className="text-foreground/80 hover:text-foreground smooth-transition font-medium text-left"
-              >
-                Skills
-              </button>
+          <div className="md:hidden mt-4 pb-2 animate-fade-in">
+            <div className="flex flex-col gap-1">
+              {navItems.map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="px-4 py-3 rounded-xl text-foreground/70 hover:text-foreground hover:bg-[hsl(0_0%_100%/0.08)] smooth-transition font-medium text-left"
+                >
+                  {item}
+                </button>
+              ))}
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-primary hover:bg-primary/90 w-full"
+                className="mt-2 rounded-xl bg-primary hover:bg-primary/90 w-full"
               >
-                Contact
+                Let's Talk
               </Button>
             </div>
           </div>

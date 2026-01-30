@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -40,10 +39,26 @@ const Contact = () => {
     },
   ];
 
+  const benefits = [
+    "Professional quality guaranteed",
+    "Fast turnaround times",
+    "Unlimited revisions",
+    "Competitive pricing",
+  ];
+
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 relative">
+      {/* Ambient background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/4 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px]"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
+          <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
+            Contact
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
@@ -52,21 +67,21 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in-left">
-            <Card className="p-8 border-border bg-card/50 backdrop-blur-sm">
+          <div className="space-y-6 animate-fade-in">
+            <div className="glass-card p-8 rounded-3xl">
               <h3 className="text-2xl font-bold font-montserrat mb-6">Contact Information</h3>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   return (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
+                    <div key={index} className="flex items-center gap-4">
+                      <div className="p-3 rounded-2xl bg-primary/10">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
+                        <p className="text-xs text-muted-foreground mb-0.5">{info.label}</p>
                         {info.href ? (
                           <a
                             href={info.href}
@@ -82,35 +97,25 @@ const Contact = () => {
                   );
                 })}
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
-              <h3 className="text-xl font-bold font-montserrat mb-3">Why Work With Me?</h3>
-              <ul className="space-y-3 text-foreground/90">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Professional quality guaranteed</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Fast turnaround times</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Unlimited revisions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Competitive pricing</span>
-                </li>
+            <div className="glass-card p-8 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/5 border-primary/20">
+              <h3 className="text-xl font-bold font-montserrat mb-5">Why Work With Me?</h3>
+              <ul className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center gap-3 text-foreground/80">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
               </ul>
-            </Card>
+            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="animate-fade-in-right">
-            <Card className="p-8 border-border">
-              <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="animate-fade-in">
+            <div className="glass-card p-8 rounded-3xl">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Your Name
@@ -122,7 +127,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
-                    className="bg-background border-border focus:border-primary"
+                    className="bg-muted/50 border-border/50 focus:border-primary rounded-xl h-12"
                   />
                 </div>
 
@@ -137,7 +142,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="bg-background border-border focus:border-primary"
+                    className="bg-muted/50 border-border/50 focus:border-primary rounded-xl h-12"
                   />
                 </div>
 
@@ -151,21 +156,21 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
-                    rows={6}
-                    className="bg-background border-border focus:border-primary resize-none"
+                    rows={5}
+                    className="bg-muted/50 border-border/50 focus:border-primary rounded-xl resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 glow-effect"
+                  className="w-full rounded-xl bg-primary hover:bg-primary/90 glow-effect h-14 text-base font-semibold group"
                 >
-                  <Send className="mr-2" size={18} />
                   Send Message
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 smooth-transition" />
                 </Button>
               </form>
-            </Card>
+            </div>
           </div>
         </div>
       </div>

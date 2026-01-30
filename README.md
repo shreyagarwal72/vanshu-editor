@@ -1,140 +1,213 @@
-# 🎬 Vanshu Agarwal — Professional Video Editor & Creative Mind
+# 🎬 Vanshu Agarwal — Professional Video Editor & Motion Graphics Artist
 
-Welcome to the official portfolio of **Vanshu Agarwal**, a passionate and creative **video editor** dedicated to transforming raw footage into cinematic masterpieces.  
-This site showcases Vanshu’s editing skills, creative direction, and YouTube content — all in one elegant, modern web experience.
+<div align="center">
+
+![Video Editor Portfolio](https://img.shields.io/badge/Video_Editor-Portfolio-3B82F6?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+**Transform raw footage into cinematic masterpieces**
+
+[🌐 Live Demo](https://vanshu-editor.lovable.app/) · [📧 Contact](mailto:sanjayvansu1973@gmail.com) · [📺 YouTube](https://www.youtube.com/@nextupstudioyt)
+
+</div>
 
 ---
 
-## 🌟 Overview
+## ✨ Overview
 
-**Website Name:** Vanshu Agarwal — Professional Video Editor & Creative Mind  
-**Purpose:** Portfolio and contact hub for video editing projects and collaborations.  
-**Built With:** Modern frontend stack for smooth performance and SEO optimization.  
+A modern, glassmorphism-styled portfolio showcasing professional video editing services. Built with iOS 26-inspired design principles featuring translucent glass effects, smooth animations, and a dark cinematic aesthetic.
 
----
+### 🎯 Key Features
 
-## 🚀 Features
-
-- 🎥 **Professional Portfolio** — Highlighting creative editing work and YouTube videos.  
-- 💻 **Modern & Responsive Design** — Optimized for desktop, tablet, and mobile viewing.  
-- ⚡ **Fast Loading** — Lightweight and performance-focused.  
-- 🔍 **SEO Optimized** — Includes complete meta tags for Google, Open Graph, and Twitter Cards.  
-- 🧠 **Personal Branding** — Focused on creativity, storytelling, and professional identity.  
+| Feature | Description |
+|---------|-------------|
+| 🪟 **iOS 26 Glassmorphism** | Modern frosted glass UI with blur effects and subtle gradients |
+| 📱 **Fully Responsive** | Optimized for all devices from mobile to 4K displays |
+| ⚡ **Performance First** | Lazy loading, optimized assets, and smooth 60fps animations |
+| 🔍 **SEO Optimized** | Complete meta tags, structured data, and semantic HTML |
+| 🎨 **Cinematic Design** | Dark theme with vibrant accent colors and ambient lighting effects |
+| ♿ **Accessible** | WCAG compliant with proper ARIA labels and keyboard navigation |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework:** React + TypeScript  
-- **Styling:** CSS / TailwindCSS  
-- **Fonts:** Montserrat & Inter (Google Fonts)  
-- **Build Tool:** Vite  
-- **Deployment:** Vercel / Netlify / GitHub Pages  
+<table>
+<tr>
+<td align="center"><strong>Frontend</strong></td>
+<td align="center"><strong>Styling</strong></td>
+<td align="center"><strong>Build</strong></td>
+<td align="center"><strong>Quality</strong></td>
+</tr>
+<tr>
+<td>
+
+- React 18.3
+- TypeScript 5.0
+- React Router 6
+
+</td>
+<td>
+
+- Tailwind CSS 3.4
+- Framer Motion
+- Lucide Icons
+
+</td>
+<td>
+
+- Vite 5.0
+- ESLint
+- PostCSS
+
+</td>
+<td>
+
+- Semantic HTML5
+- Schema.org JSON-LD
+- Core Web Vitals
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🧩 Meta Configuration
+## 📂 Project Structure
 
-The HTML includes full SEO and social tags for better visibility and sharing:
-
-```html
-<meta name="google-site-verification" content="KYowygvsrbCJwszF1adTZ1WltiKdP6Mvx_YMChVKKBQ" />
-<meta name="description" content="Professional video editor and creative specialist. Explore my portfolio of stunning video projects, editing skills, and YouTube content." />
-<meta property="og:title" content="Vanshu Agarwal - Professional Video Editor & Creative Mind" />
-<meta property="og:description" content="Professional video editor and creative specialist. Explore my portfolio and YouTube content." />
-<meta property="og:image" content="/favicon.png" />
-<meta name="twitter:card" content="summary_large_image" />
-
-
----
-
-📁 Project Structure
-
-Vanshu-Agarwal-Portfolio/
+```
+vanshu-portfolio/
 ├── public/
-│   ├── favicon.png
+│   ├── favicon.png          # Site favicon
+│   ├── og-image.jpg         # Open Graph image
+│   └── robots.txt           # Search engine directives
 ├── src/
+│   ├── assets/              # Images and media
 │   ├── components/
+│   │   ├── ui/              # Shadcn/UI components
+│   │   ├── Hero.tsx         # Hero section
+│   │   ├── About.tsx        # About section
+│   │   ├── Services.tsx     # Services offered
+│   │   ├── Skills.tsx       # Skills & expertise
+│   │   ├── Achievements.tsx # Stats & achievements
+│   │   ├── Contact.tsx      # Contact form
+│   │   ├── Navbar.tsx       # Navigation
+│   │   └── Footer.tsx       # Footer
 │   ├── pages/
-│   ├── assets/
-│   ├── main.tsx
-│   └── App.tsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-
+│   │   └── Index.tsx        # Main page
+│   ├── index.css            # Global styles & design tokens
+│   └── main.tsx             # Entry point
+├── index.html               # HTML template with SEO
+├── tailwind.config.ts       # Tailwind configuration
+└── vite.config.ts           # Vite configuration
+```
 
 ---
 
-⚙️ Local Setup
+## 🚀 Quick Start
 
-1. Clone the Repository
+### Prerequisites
 
-git clone https://github.com/your-username/vanshu-agarwal-portfolio.git
-cd vanshu-agarwal-portfolio
+- Node.js 18+ or Bun
+- npm, yarn, or bun
 
+### Installation
 
-2. Install Dependencies
+```bash
+# Clone the repository
+git clone https://github.com/your-username/vanshu-portfolio.git
+cd vanshu-portfolio
 
+# Install dependencies
 npm install
+# or
+bun install
 
-
-3. Run Development Server
-
+# Start development server
 npm run dev
+# or
+bun dev
+```
 
+The site will be available at `http://localhost:5173`
 
-4. Build for Production
+### Build for Production
 
+```bash
 npm run build
-
-
-
-
----
-
-📡 Deployment
-
-You can easily deploy this portfolio using:
-
-Vercel (Recommended)
-
-Netlify
-
-GitHub Pages
-
-Cloudflare Pages
-
-
-Simply connect your GitHub repository and deploy the build folder.
-
+npm run preview
+```
 
 ---
 
-🧠 Future Enhancements
+## 🎨 Design System
 
-🎞️ Add video previews of past editing projects
+### Color Palette
 
-🧩 Integrate contact form with email notifications
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--primary` | `hsl(210 100% 60%)` | Primary actions, links |
+| `--accent` | `hsl(280 80% 65%)` | Accent highlights |
+| `--background` | `hsl(220 20% 4%)` | Page background |
+| `--foreground` | `hsl(0 0% 98%)` | Primary text |
 
-💬 Add testimonials from clients
+### Glass Effects
 
-🔗 Connect YouTube and Instagram feeds dynamically
-
-
+```css
+.glass-card {
+  background: linear-gradient(135deg, hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.02));
+  backdrop-filter: blur(24px);
+  border: 1px solid hsl(0 0% 100% / 0.12);
+}
+```
 
 ---
 
-👨‍🎨 Author
+## 📈 SEO Features
 
-Developed by: Vanshu Agarwal
-🎥 Professional Video Editor & Content Creator
-💡 Passionate about storytelling, cinematics, and creative editing.
-
+- ✅ Semantic HTML5 structure
+- ✅ Complete Open Graph & Twitter Card meta tags
+- ✅ Schema.org structured data (Person, Service, WebSite)
+- ✅ Optimized title & meta descriptions
+- ✅ Canonical URLs
+- ✅ Mobile-friendly viewport
+- ✅ Performance-optimized assets
 
 ---
 
-🪪 License
+## 🌐 Deployment
 
-This project is open source and available under the MIT License.
+Deploy easily to any static hosting platform:
+
+| Platform | Command |
+|----------|---------|
+| **Vercel** | `vercel --prod` |
+| **Netlify** | Connect GitHub repo |
+| **Cloudflare Pages** | Connect GitHub repo |
+| **GitHub Pages** | `npm run build` → deploy `dist/` |
+
+---
+
+## 📞 Contact
+
+**Vanshu Agarwal**  
+📧 [sanjayvansu1973@gmail.com](mailto:sanjayvansu1973@gmail.com)  
+📱 [+91 9412104618](tel:9412104618)  
+📺 [YouTube Channel](https://www.youtube.com/@nextupstudioyt)  
+📍 Agra, India
+
+---
+
+## 📄 License
+
+This project is open source under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Crafted with ❤️ for visual storytelling**
+
+</div>

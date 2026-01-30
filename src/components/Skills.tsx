@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Film, Palette, Music, Zap, Camera, Sparkles } from "lucide-react";
 
 const Skills = () => {
@@ -41,10 +40,23 @@ const Skills = () => {
     },
   ];
 
+  const software = [
+    "Premiere Pro", "After Effects", "DaVinci Resolve", "Final Cut Pro", 
+    "Photoshop", "Illustrator", "Audition", "Cinema 4D"
+  ];
+
   return (
-    <section id="skills" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-24 relative">
+      {/* Ambient background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
+          <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
+            Expertise
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold font-montserrat mb-4">
             My <span className="gradient-text">Skills</span>
           </h2>
@@ -53,17 +65,17 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <Card
+              <div
                 key={index}
-                className="p-6 border-border hover:border-primary smooth-transition group animate-fade-in"
+                className="glass-card p-6 rounded-3xl smooth-transition hover:scale-[1.02] hover:border-primary/30 group animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 smooth-transition">
+                <div className="flex items-start gap-4 mb-5">
+                  <div className="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary/20 smooth-transition">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
@@ -76,36 +88,34 @@ const Skills = () => {
                     <span className="text-muted-foreground">Proficiency</span>
                     <span className="font-semibold text-primary">{skill.level}%</span>
                   </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div className="h-2 bg-muted/50 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary to-accent smooth-transition"
+                      className="h-full rounded-full bg-gradient-to-r from-primary to-accent smooth-transition"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border animate-fade-in">
-            <h3 className="text-2xl font-bold font-montserrat mb-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="glass-card p-8 md:p-10 rounded-3xl animate-fade-in">
+            <h3 className="text-2xl font-bold font-montserrat mb-6 text-center">
               Software Proficiency
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              {["Premiere Pro", "After Effects", "DaVinci Resolve", "Final Cut Pro", "Photoshop", "Illustrator", "Audition", "Cinema 4D"].map(
-                (software, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-muted/50 rounded-lg hover:bg-primary/10 smooth-transition"
-                  >
-                    <p className="font-semibold">{software}</p>
-                  </div>
-                )
-              )}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {software.map((item, index) => (
+                <div
+                  key={index}
+                  className="glass-subtle p-4 rounded-2xl text-center smooth-transition hover:bg-[hsl(0_0%_100%/0.08)] hover:scale-105"
+                >
+                  <p className="font-semibold text-sm">{item}</p>
+                </div>
+              ))}
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
