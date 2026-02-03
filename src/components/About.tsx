@@ -40,7 +40,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 relative" ref={ref}>
+    <section id="about" className="py-16 sm:py-20 md:py-24 relative" ref={ref}>
       {/* Ambient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -53,24 +53,24 @@ const About = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-12 md:mb-16"
             variants={staggerContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.span 
               variants={blurFadeIn}
-              className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4 block"
             >
               About Me
             </motion.span>
             <motion.h2 
               variants={fadeUpSpring}
-              className="text-4xl md:text-5xl font-bold font-montserrat mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat mb-4"
             >
               Passion Meets <span className="gradient-text">Precision</span>
             </motion.h2>
@@ -84,7 +84,7 @@ const About = () => {
 
           {/* Stats Cards */}
           <motion.div 
-            className="grid md:grid-cols-3 gap-6 mb-16"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12 md:mb-16"
             variants={staggerContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -101,20 +101,20 @@ const About = () => {
                   }}
                   whileTap={{ scale: 0.98 }}
                   transition={springConfig.bouncy}
-                  className="glass-card p-8 rounded-3xl text-center cursor-pointer group"
+                  className="glass-card p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl text-center cursor-pointer group"
                 >
                   <motion.div 
-                    className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center"
+                    className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 sm:mb-5 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center"
                     whileHover={{ 
                       scale: 1.1,
                       backgroundColor: "hsl(210 100% 60% / 0.2)",
                     }}
                     transition={springConfig.gentle}
                   >
-                    <Icon className="w-7 h-7 text-primary" />
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                   </motion.div>
                   <motion.div 
-                    className="text-4xl font-bold font-montserrat mb-2 gradient-text"
+                    className="text-3xl sm:text-4xl font-bold font-montserrat mb-2 gradient-text"
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={isInView ? { scale: 1, opacity: 1 } : {}}
                     transition={{ 
@@ -134,7 +134,7 @@ const About = () => {
 
           {/* Bio Card */}
           <motion.div 
-            className="glass-card p-8 md:p-10 rounded-3xl"
+            className="glass-card p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl"
             variants={fadeUpSpring}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

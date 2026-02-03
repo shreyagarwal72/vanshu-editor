@@ -26,7 +26,7 @@ const Footer = () => {
   const navLinks = ["Home", "About", "Services", "Skills", "Contact"];
 
   return (
-    <footer className="relative pt-16 pb-8" ref={ref}>
+    <footer className="relative pt-10 sm:pt-12 md:pt-16 pb-6 sm:pb-8" ref={ref}>
       {/* Animated top gradient border */}
       <motion.div 
         className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
@@ -35,16 +35,16 @@ const Footer = () => {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div 
-          className="glass-subtle rounded-3xl p-10 mb-8"
+          className="glass-subtle rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={springConfig.gentle}
           whileHover={{ borderColor: "hsl(0 0% 100% / 0.1)" }}
         >
           <motion.div 
-            className="grid md:grid-cols-3 gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10"
             variants={staggerContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

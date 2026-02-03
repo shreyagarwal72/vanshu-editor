@@ -58,7 +58,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 relative" ref={ref}>
+    <section id="skills" className="py-16 sm:py-20 md:py-24 relative" ref={ref}>
       {/* Ambient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -71,22 +71,22 @@ const Skills = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.span 
             variants={blurFadeIn}
-            className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+            className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4 block"
           >
             Expertise
           </motion.span>
           <motion.h2 
             variants={fadeUpSpring}
-            className="text-4xl md:text-5xl font-bold font-montserrat mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat mb-4"
           >
             My <span className="gradient-text">Skills</span>
           </motion.h2>
@@ -99,7 +99,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 md:mb-16"
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -116,7 +116,7 @@ const Skills = () => {
                 }}
                 whileTap={{ scale: 0.98 }}
                 transition={springConfig.bouncy}
-                className="glass-card p-6 rounded-3xl cursor-pointer group"
+                className="glass-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl cursor-pointer group"
               >
                 <div className="flex items-start gap-4 mb-5">
                   <motion.div 
@@ -171,15 +171,15 @@ const Skills = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.div 
-            className="glass-card p-8 md:p-10 rounded-3xl"
+            className="glass-card p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl"
             whileHover={{ borderColor: "hsl(0 0% 100% / 0.15)" }}
             transition={springConfig.gentle}
           >
-            <h3 className="text-2xl font-bold font-montserrat mb-6 text-center">
+            <h3 className="text-xl sm:text-2xl font-bold font-montserrat mb-4 sm:mb-6 text-center">
               Software Proficiency
             </h3>
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4"
               variants={staggerFaster}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
