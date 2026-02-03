@@ -40,7 +40,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 px-6 md:px-12 lg:px-24 relative" ref={ref}>
+    <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24 relative" ref={ref}>
       {/* Ambient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -68,7 +68,7 @@ const Services = () => {
           </motion.span>
           <motion.h2 
             variants={fadeUpSpring}
-            className="text-4xl md:text-5xl font-montserrat font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-montserrat font-bold mb-4"
           >
             What I <span className="gradient-text">Offer</span>
           </motion.h2>

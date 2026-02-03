@@ -50,7 +50,7 @@ const Hero = () => {
   const surname = "AGARWAL";
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Background Image with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -66,9 +66,9 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
         
-        {/* Animated ambient glows */}
+        {/* Animated ambient glows - smaller on mobile */}
         <motion.div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"
+          className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px]"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.3, 0.2],
@@ -76,7 +76,7 @@ const Hero = () => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px]"
+          className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-accent/20 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px]"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.2, 0.35, 0.2],
@@ -86,9 +86,9 @@ const Hero = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 text-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
         <motion.div 
-          className="max-w-4xl mx-auto space-y-8"
+          className="max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
@@ -96,10 +96,10 @@ const Hero = () => {
           {/* Badge */}
           <motion.div 
             variants={blurFadeIn}
-            className="inline-flex items-center gap-2 glass-card rounded-full px-5 py-2 text-sm"
+            className="inline-flex items-center gap-2 glass-card rounded-full px-3 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm"
           >
             <motion.span 
-              className="w-2 h-2 rounded-full bg-green-400"
+              className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-400"
               animate={{ 
                 scale: [1, 1.3, 1],
                 opacity: [1, 0.7, 1],
@@ -111,7 +111,7 @@ const Hero = () => {
 
           {/* Name with character animation */}
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-black font-montserrat text-foreground leading-[0.9] cursor-pointer select-none"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-montserrat text-foreground leading-[0.9] cursor-pointer select-none"
             onClick={handleSecretClick}
             title="🤫"
             variants={fadeUpSpring}
@@ -157,14 +157,14 @@ const Hero = () => {
           
           <motion.p 
             variants={blurFadeIn}
-            className="text-xl md:text-2xl text-foreground/60 max-w-xl mx-auto font-light"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/60 max-w-xl mx-auto font-light px-2"
           >
             Video Editor & Creative Mind crafting visual stories that captivate
           </motion.p>
           
           <motion.div 
             variants={fadeUpSpring}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-2 sm:pt-4"
           >
             <motion.div
               variants={buttonPress}
@@ -176,7 +176,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("contact")}
-                className="rounded-2xl bg-primary hover:bg-primary/90 text-lg px-8 py-6 glow-effect"
+                className="rounded-2xl bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 glow-effect w-full sm:w-auto"
               >
                 Start a Project
               </Button>
@@ -192,7 +192,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection("services")}
-                className="rounded-2xl glass border-[hsl(0_0%_100%/0.15)] hover:bg-[hsl(0_0%_100%/0.1)] text-lg px-8 py-6"
+                className="rounded-2xl glass border-[hsl(0_0%_100%/0.15)] hover:bg-[hsl(0_0%_100%/0.1)] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
               >
                 <Play size={18} className="mr-2" />
                 See My Work
@@ -202,7 +202,7 @@ const Hero = () => {
 
           {/* Scroll indicator */}
           <motion.div 
-            className="pt-16"
+            className="pt-8 sm:pt-12 md:pt-16"
             variants={scaleUp}
             animate={floatingAnimation}
           >

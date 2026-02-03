@@ -61,7 +61,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative" ref={ref}>
+    <section id="contact" className="py-16 sm:py-20 md:py-24 relative" ref={ref}>
       {/* Ambient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -82,22 +82,22 @@ const Contact = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.span 
             variants={blurFadeIn}
-            className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+            className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4 block"
           >
             Contact
           </motion.span>
           <motion.h2 
             variants={fadeUpSpring}
-            className="text-4xl md:text-5xl font-bold font-montserrat mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat mb-4"
           >
             Get In <span className="gradient-text">Touch</span>
           </motion.h2>
@@ -109,20 +109,20 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div 
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
             variants={slideFromLeft}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.div 
-              className="glass-card p-8 rounded-3xl"
+              className="glass-card p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl"
               whileHover={{ borderColor: "hsl(0 0% 100% / 0.15)" }}
               transition={springConfig.gentle}
             >
-              <h3 className="text-2xl font-bold font-montserrat mb-6">Contact Information</h3>
+              <h3 className="text-xl sm:text-2xl font-bold font-montserrat mb-4 sm:mb-6">Contact Information</h3>
               <motion.div 
                 className="space-y-5"
                 variants={staggerContainer}
@@ -169,13 +169,13 @@ const Contact = () => {
             </motion.div>
 
             <motion.div 
-              className="glass-card p-8 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/5 border-primary/20"
+              className="glass-card p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/10 to-accent/5 border-primary/20"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3, ...springConfig.gentle }}
               whileHover={{ borderColor: "hsl(210 100% 60% / 0.3)" }}
             >
-              <h3 className="text-xl font-bold font-montserrat mb-5">Why Work With Me?</h3>
+              <h3 className="text-lg sm:text-xl font-bold font-montserrat mb-4 sm:mb-5">Why Work With Me?</h3>
               <motion.ul 
                 className="space-y-3"
                 variants={staggerContainer}
@@ -216,7 +216,7 @@ const Contact = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.div 
-              className="glass-card p-8 rounded-3xl"
+              className="glass-card p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl"
               whileHover={{ borderColor: "hsl(0 0% 100% / 0.15)" }}
               transition={springConfig.gentle}
             >
