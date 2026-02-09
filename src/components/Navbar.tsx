@@ -36,10 +36,9 @@ const Navbar = () => {
         stiffness: 100,
         damping: 20,
       }}
-      className={`fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] sm:w-[95%] max-w-5xl rounded-xl sm:rounded-2xl smooth-transition ${
+      className={`fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] sm:w-[92%] max-w-5xl rounded-xl sm:rounded-2xl smooth-transition ${
         isScrolled ? "glass-strong" : "glass-subtle"
       }`}
-      style={{ minHeight: 'auto' }}
     >
       <div className="px-4 sm:px-6 py-2 sm:py-3">
         <div className="flex items-center justify-between">

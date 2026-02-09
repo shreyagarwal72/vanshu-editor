@@ -77,17 +77,17 @@ const Achievements = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 md:px-12 lg:px-24 relative">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div 
-          className="glass-strong rounded-3xl p-10 md:p-14"
+          className="glass-strong rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-14"
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={springConfig.gentle}
           whileHover={{ borderColor: "hsl(0 0% 100% / 0.2)" }}
         >
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-12"
             variants={staggerContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -123,7 +123,7 @@ const Achievements = () => {
                   </motion.div>
                 </motion.div>
                 <motion.div 
-                  className="text-4xl md:text-5xl font-montserrat font-bold gradient-text mb-2"
+                  className="text-2xl sm:text-4xl md:text-5xl font-montserrat font-bold gradient-text mb-2"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ 

@@ -55,7 +55,7 @@ const Services = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -96,7 +96,7 @@ const Services = () => {
               }}
               whileTap={{ scale: 0.98 }}
               transition={springConfig.bouncy}
-              className="glass-card p-8 rounded-3xl cursor-pointer group"
+              className="glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl cursor-pointer group"
             >
               <motion.div 
                 className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6`}
