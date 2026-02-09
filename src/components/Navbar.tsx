@@ -36,11 +36,13 @@ const Navbar = () => {
         stiffness: 100,
         damping: 20,
       }}
-      className={`fixed top-0 left-0 right-0 z-50 w-full smooth-transition ${
-        isScrolled ? "glass-strong shadow-lg shadow-black/10" : "bg-background/80 backdrop-blur-xl"
+      className={`fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl rounded-2xl sm:rounded-3xl smooth-transition border border-white/[0.12] ${
+        isScrolled 
+          ? "bg-white/[0.08] backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]" 
+          : "bg-white/[0.05] backdrop-blur-xl shadow-[0_4px_16px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.08)]"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <div className="px-4 sm:px-6 py-2.5 sm:py-3">
         <div className="flex items-center justify-between">
           <motion.button 
             onClick={() => scrollToSection("hero")}
