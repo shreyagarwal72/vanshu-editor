@@ -36,7 +36,7 @@ const Navbar = () => {
         stiffness: 100,
         damping: 20,
       }}
-      className={`fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] sm:w-[90%] max-w-4xl rounded-2xl sm:rounded-3xl smooth-transition ${
+      className={`fixed top-3 sm:top-4 inset-x-0 mx-auto z-50 w-[94%] sm:w-[90%] max-w-4xl rounded-2xl sm:rounded-3xl smooth-transition ${
         isScrolled 
           ? "liquid-glass-nav-scrolled" 
           : "liquid-glass-nav"
