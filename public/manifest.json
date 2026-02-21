@@ -1,0 +1,21 @@
+{
+  "name": "Vanshu Agarwal - Video Editor",
+  "short_name": "Vanshu",
+  "description": "Professional Video Editor & Motion Graphics Artist",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#0a0c10",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
