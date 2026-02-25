@@ -10,7 +10,7 @@ import IntroAnimation from "@/components/IntroAnimation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <IntroAnimation />
       <Navbar />
       <main>

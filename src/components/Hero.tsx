@@ -50,7 +50,7 @@ const Hero = () => {
   const surname = "AGARWAL";
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 w-full">
       {/* Background Image with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0"
