@@ -23,7 +23,7 @@ const Footer = () => {
     }
   };
 
-  const navLinks = ["Home", "About", "Services", "Skills", "Contact"];
+  const navLinks = ["Home", "About", "Services", "Portfolio", "Skills", "Contact"];
 
   return (
     <footer className="relative pt-10 sm:pt-12 md:pt-16 pb-6 sm:pb-8" ref={ref}>
