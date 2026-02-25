@@ -24,7 +24,7 @@ const Navbar = () => {
     }
   };
 
-  const navItems = ["Home", "About", "Services", "Portfolio", "Skills", "Contact"];
+  const navItems = ["Home", "About", "Services", "Skills", "Contact"];
 
   return (
     <motion.nav
